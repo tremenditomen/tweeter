@@ -16,3 +16,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+## screen shots 
+this is a screen shot of the page on desktop mode https://github.com/tremenditomen/tweeter/blob/master/docs/desktopmode.png?raw=true
+this is a screen shot of the page on phone / tablet mode https://github.com/tremenditomen/tweeter/blob/master/docs/phonemode.png?raw=true
