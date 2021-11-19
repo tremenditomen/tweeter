@@ -6,20 +6,77 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  width: 100%;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f1ec;
+  width: 100%;
+  margin-top: 5em;
+  align-items: center;
+}
+
+.container h2 {
+  border-bottom: 5px solid #55514a;
+  width: 100%;
+}
+
+.img {
+  display: none;
+  margin-top: 2rem;
+}
+
+.foundit {
+  width: 47rem;
+  margin-left: 4.5rem;
+}
+
+.header-container {
+  margin-top: 13.5em;
+  margin-right: 10rem;
+  margin-left: 3rem;
+}
+.header {
+  background-image: none;
+  background-color: transparent;
+}
+
+@media (max-width: 981px) {
+  .header {
+    background-color: black;
+    margin-top: 7rem;
+  }
+  #tweets-container {
+    margin-right: 3rem;
+    margin-left: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    margin-left: 2rem;
+    margin-top: 7em;
+    width: 24em;
+  }
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header-container {
+    width: 15em;
+  }
+}

@@ -1,0 +1,30 @@
+.nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #ffffff;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.write-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-family: "Bungee", cursive;
+}
+.fa-angle-double-down {
+  display: flex;
+  justify-content: center;
+  color: red;
+}

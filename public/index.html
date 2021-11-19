@@ -1,29 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+  <!-- External fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
+    rel="stylesheet">
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!---timeago-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <!-- Nav.css -->
+  <link rel="stylesheet" href="styles/nav.css" type="text/css">
+  <!-- header.css -->
+  <link rel="stylesheet" href="styles/header.css" type="text/css">
+  <!--new-tweets.css-->
+  <link rel="stylesheet" href="/styles/new-tweets.css" type="text/css" />
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav class="nav" z-index: 10>
+    <span class="title">tweeter</span>
+    <div class="newbox">
+      <span class="newtweet"><b> Write</b> new tweet</span>
+      <i class="fas fa-angle-double-down"></i>
+    </div>
+  </nav>
+  <!-- header -->
+  <header class="header" z-index:1>
+    <div class="img">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div class="name">
+      <h2><b>Luis</b></h2>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <p id="error">error check the text box !</p>
+      <form method="POST" action="/tweets" class="foundit">
+
+        <textarea name="text" id="tweet-text">What are you humming about?</textarea>
+        <div class="layout-of-tweeting">
+          <button type="submit" class="tweet">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+
+      <section id="tweets-container">
+        <article class="fresh-tweet">
+      </section>
+      <script src="./scripts/ composer-char-counter.js"></script>
+  </main>
+</body>
+
 </html>
